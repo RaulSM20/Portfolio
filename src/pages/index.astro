@@ -10,6 +10,7 @@ import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import CodeIcon from "../icons/CodeIcon.astro";
 import Skills from "../components/Skills.astro";
+import SkillsIcon from "../icons/SkillsIcon.astro";
 ---
 
 <Layout title="Portfolio de Raul Sandez - Desarrollador y programador web">
@@ -50,7 +51,9 @@ import Skills from "../components/Skills.astro";
     </SectionContainer>
 
     <SectionContainer class="py-14 pb-22" id="skills">
-      <h2 class="text-2xl font-semibold mb-6">Habilidades</h2>
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <SkillsIcon class="lg:size-6 md:size-4 size-4" />Habilidades
+      </h2>
       <Skills />
     </SectionContainer>
     <SectionContainer class="py-14 pb-22" id="experience">

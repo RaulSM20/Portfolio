@@ -1,0 +1,162 @@
+---
+import AstroIcon from "../icons/AstroIcon.astro";
+import DockerIcon from "../icons/skills/DockerIcon.astro";
+import GitIcon from "../icons/skills/GitIcon.astro";
+import HtmlIcon from "../icons/skills/HtmlIcon.astro";
+import JavaIcon from "../icons/skills/JavaIcon.astro";
+import JavascriptIcon from "../icons/skills/JavascriptIcon.astro";
+import JqueryIcon from "../icons/skills/JqueryIcon.astro";
+import LaravelIcon from "../icons/skills/LaravelIcon.astro";
+import MysqlIcon from "../icons/skills/MysqlIcon.astro";
+import NextJsIcon from "../icons/skills/NextJsIcon.astro";
+import NodeJsIcon from "../icons/skills/NodeJsIcon.astro";
+import PostgresqlIcon from "../icons/skills/PostgresqlIcon.astro";
+import ReactIcon from "../icons/skills/ReactIcon.astro";
+import SpringIcon from "../icons/skills/SpringIcon.astro";
+import TypeScriptIcon from "../icons/skills/TypeScriptIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import BootstrapIcon from "./BootstrapIcon.astro";
+
+const ICONS = {
+  ASTRO: {
+    icon: AstroIcon,
+  },
+  TAILWIND: {
+    icon: TailwindIcon,
+  },
+  JAVA: {
+    icon: JavaIcon,
+  },
+  SPRING_BOOT: {
+    icon: SpringIcon,
+  },
+  HTML_CSS: {
+    icon: HtmlIcon,
+  },
+  TYPESCRIPT: {
+    icon: TypeScriptIcon,
+  },
+  NODEJS: {
+    icon: NodeJsIcon,
+  },
+  JAVASCRIPT: {
+    icon: JavascriptIcon,
+  },
+  JQUERY: {
+    icon: JqueryIcon,
+  },
+  REACT: {
+    icon: ReactIcon,
+  },
+  MYSQL: {
+    icon: MysqlIcon,
+  },
+  POSTGRESQL: {
+    icon: PostgresqlIcon,
+  },
+  GIT: {
+    icon: GitIcon,
+  },
+  DOCKER: {
+    icon: DockerIcon,
+  },
+  NEXTJS: {
+    icon: NextJsIcon,
+  },
+  BOOTSTRAP: {
+    icon: BootstrapIcon,
+  },
+  LARAVEL: {
+    icon: LaravelIcon,
+  },
+};
+
+const SKILLS = [
+  {
+    name: "Astro",
+    icons: [ICONS.ASTRO],
+  },
+  {
+    name: "Tailwind CSS",
+    icons: [ICONS.TAILWIND],
+  },
+  {
+    name: "Java",
+    icons: [ICONS.JAVA],
+  },
+  {
+    name: "Spring Boot",
+    icons: [ICONS.SPRING_BOOT],
+  },
+  {
+    name: "HTML & CSS",
+    icons: [ICONS.HTML_CSS],
+  },
+  {
+    name: "TypeScript",
+    icons: [ICONS.TYPESCRIPT],
+  },
+  {
+    name: "NodeJS",
+    icons: [ICONS.NODEJS],
+  },
+  {
+    name: "JavaScript",
+    icons: [ICONS.JAVASCRIPT],
+  },
+  {
+    name: "jQuery",
+    icons: [ICONS.JQUERY],
+  },
+  {
+    name: "React",
+    icons: [ICONS.REACT],
+  },
+  {
+    name: "MySQL",
+    icons: [ICONS.MYSQL],
+  },
+  {
+    name: "PostgreSQL",
+    icons: [ICONS.POSTGRESQL],
+  },
+  {
+    name: "Git",
+    icons: [ICONS.GIT],
+  },
+  {
+    name: "Docker",
+    icons: [ICONS.DOCKER],
+  },
+  {
+    name: "NextJS",
+    icons: [ICONS.NEXTJS],
+  },
+  {
+    name: "Bootstrap",
+    icons: [ICONS.BOOTSTRAP],
+  },
+  {
+    name: "Laravel",
+    icons: [ICONS.LARAVEL],
+  },
+];
+---
+
+<section>
+  <ul class="flex gap-x-3 flex-wrap">
+    {
+      SKILLS.map(({ name, icons }) => (
+        <li>
+          <span class="flex gap-x-2 rounded-full bg-gray-900 justify-center items-center py-1 px-4 mb-4">
+            {icons.map((icons) => (
+              <icons.icon class="lg:size-6 md:size-4 size-4" />
+            ))}
+            <icons />
+            <h3>{name}</h3>
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
