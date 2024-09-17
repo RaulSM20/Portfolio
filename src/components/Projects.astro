@@ -1,0 +1,51 @@
+---
+import AstroIcon from "../icons/AstroIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+
+const TAGS = {
+  ASTRO: {
+    name: "Astro",
+    icon: AstroIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    icon: TailwindIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Portfolio personal",
+    description:
+      "Este portafolio está creado con Astro y TailwindCSS. Muestra mis proyectos y habilidades en una página rápida, moderna y fácil de navegar, con un diseño limpio y responsive. Optimizado para el SEO y el rendimiento",
+    link: "#",
+    github: "#",
+    image: "../../public/pr1.png",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4">{description}</p>
+      <ul class="flex gap-x-3 ">
+        {tags.map((tag) => (
+          <li>
+            <span class="flex gap-x-2 rounded-full bg-gray-900 justify-center items-center py-1 px-4 mb-4">
+              <tag.icon class="lg:size-6 md:size-4 size-4" />
+              {tag.name}{" "}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white-/10"
+        src={image}
+        alt={title}
+      />
+    </article>
+  ))
+}
