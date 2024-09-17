@@ -1,10 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../icons/GitHubIcon.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		
-	</main>
+<Layout title="Portfolio de Raul Sandez - Desarrollador y programador web">
+  <main>
+    <SectionContainer class="py-44 pb-22">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, soy Raul Sandez <a
+          href="https://linkedin.com/in/raul-sandez"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl opacity-80 text-wrap pb-6">
+        Desarrollador Web / FullStack. De Barcelona, España. Diseño de webs
+        responsivas y visuales
+      </h2>
+      <ul>
+        <nav class="flex gap-x-4">
+          <SocialPill href="https://linkedin.com/in/raul-sandez">
+            <Linkedin class="w-6 h-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/RaulSM20">
+            <GitHubIcon class="w-6 h-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:raulsandezmartinez@gmail.com">
+            <MailIcon class="w-6 h-6" />
+            raulsandezmartinez@gmail.com
+          </SocialPill>
+        </nav>
+      </ul>
+    </SectionContainer>
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-6">Experiencia laboral</h2>
+      <Experience />
+    </SectionContainer>
+  </main>
 </Layout>
